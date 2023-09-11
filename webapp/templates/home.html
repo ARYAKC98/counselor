@@ -1,0 +1,675 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <title>Counselor - Free Bootstrap 4 Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="{% static 'new/assets/css/animate.css' %}">
+
+    <link rel="stylesheet" href="{% static 'new/assets/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'new/assets/css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'new/assets/css/magnific-popup.css' %}">
+
+    <link rel="stylesheet" href="{% static 'new/assets/css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'new/assets/css/style.css' %}">
+  </head>
+  <body>
+
+  	<div class="wrap">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 d-flex align-items-center">
+						<p class="mb-0 phone pl-md-2">
+							<a href="#" class="mr-2"><span class="fa fa-phone mr-1"></span> +00 1234 567</a>
+							<a href="#"><span class="fa fa-paper-plane mr-1"></span> youremail@email.com</a>
+						</p>
+					</div>
+					<div class="col-md-6 d-flex justify-content-md-end">
+						<div class="social-media">
+			    		<p class="mb-0 d-flex">
+			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
+			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a>
+			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
+			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-dribbble"><i class="sr-only">Dribbble</i></span></a>
+			    		</p>
+		        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Counselor</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item active"><a href="{% url 'home_page' %}" class="nav-link">Home</a></li>
+	          <li class="nav-item"><a href="{% url 'about_page' %}" class="nav-link">About</a></li>
+	          <li class="nav-item"><a href="{% url 'counselor_page' %}" class="nav-link">Counselor</a></li>
+	          <li class="nav-item"><a href="{% url 'service_page' %}" class="nav-link">Services</a></li>
+				<li class="nav-item"><a href="{% url 'price_page' %}" class="nav-link">pricing</a></li>
+	          <li class="nav-item"><a href="{% url 'blog_page' %}" class="nav-link">Blog</a></li>
+	          <li class="nav-item"><a href="{% url 'contact_page' %}" class="nav-link">Contact</a></li>
+				{% if request.session.username %}
+				<a href="" class="nav-link">{{request.session.username}}</a>
+				<ul>
+					<li><a href=""></a></li>
+
+				{% else %}
+					<li><a href="{% url 'register_page' %}"></a></li>
+					{% endif %}
+				</ul>
+
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+
+    <div class="hero-wrap" style="background-image: url({% static 'new/assets/images/bcg_new.jpg' %});" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center">
+          <div class="col-md-6 ftco-animate d-flex align-items-end">
+          	<div class="text w-100">
+	            <h1 class="mb-4">Counseling For Your Better Life</h1>
+	            <p class="mb-4">No matter what's troubling you, get the support you need, right here, right now.</p>
+	            <p><a href="#" class="btn btn-primary py-3 px-4">APPOINTMENT</a>
+            </div>
+
+<!--          <a href="https://vimeo.com/45830194" class="img-video popup-vimeo d-flex align-items-center justify-content-center">-->
+<!--          	<span class="fa fa-play"></span>-->
+<!--          </a>-->
+        </div>
+      </div>
+    </div>
+
+    <section class="ftco-intro">
+    	<div class="container">
+    		<div class="row no-gutters">
+    			<div class="col-md-4 d-flex">
+    				<div class="intro aside-stretch d-lg-flex w-100">
+    					<div class="icon">
+    						<span class="flaticon-checklist"></span>
+    					</div>
+    					<div class="text">
+    						<h2>100% Confidential</h2>
+    						<p>Confidentiality is an important aspect of counseling.We provide 100% confidential counseling session.</p>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="col-md-4 d-flex">
+    				<div class="intro color-1 d-lg-flex w-100">
+
+    					<div class="icon">
+    						<span class="flaticon-employee"></span>
+    					</div>
+    					<div class="text">
+    						<h2>Qualified Team</h2>
+    						<p>A team of professionals who understand and guide you with the rich and deep life awareness throughout the process of guidance and healing.</p>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="col-md-4 d-flex">
+    				<div class="intro color-2 d-lg-flex w-100">
+    					<div class="icon">
+    						<span class="flaticon-umbrella"></span>
+    					</div>
+    					<div class="text">
+    						<h2>Individual Approach</h2>
+    						<p>The decision to come to therapy is very courageous and it is an honor to walk alongside people as they work hard to live-out an immensely better and more fulfilling life. You can choose to see your therapist in-person.</p>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+		<section class="ftco-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+          	<span class="subheading">Services</span>
+            <h2>How It Works</h2>
+          </div>
+        </div>
+    		<div class="row">
+    			<div class="col-md-4 d-flex align-items-stretch ftco-animate">
+    				<div class="services-2 text-center">
+    					<div class="icon-wrap">
+    						<div class="number d-flex align-items-center justify-content-center"><span>01</span></div>
+	    					<div class="icon d-flex align-items-center justify-content-center">
+	    						<span class="flaticon-calendar"></span>
+	    					</div>
+    					</div>
+    					<h2>Make Schedule</h2>
+    					<p>Sometimes a small step in life can make it lighter, brighter and fuller. Schedule an appointment today!</p>
+    				</div>
+    			</div>
+    			<div class="col-md-4 d-flex align-items-stretch ftco-animate">
+    				<div class="services-2 text-center">
+    					<div class="icon-wrap">
+    						<div class="number d-flex align-items-center justify-content-center"><span>02</span></div>
+	    					<div class="icon d-flex align-items-center justify-content-center">
+	    						<span class="flaticon-qa"></span>
+	    					</div>
+    					</div>
+    					<h2>Start Discussion</h2>
+  						<p>Open up to your Expert in a space where you get the guidance you need, and your concerns get the attention they deserve.</p>
+    				</div>
+    			</div>
+    			<div class="col-md-4 d-flex align-items-stretch ftco-animate">
+    				<div class="services-2 text-center">
+    					<div class="icon-wrap">
+    						<div class="number d-flex align-items-center justify-content-center"><span>03</span></div>
+	    					<div class="icon d-flex align-items-center justify-content-center">
+	    						<span class="flaticon-checklist"></span>
+	    					</div>
+    					</div>
+    					<h2>Enjoy Plan</h2>
+  						<p>With support from our experts, did goodbye to your old self and be on your way to becoming a better you..</p>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+    <section class="ftco-section ftco-no-pb ftco-no-pt">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 img img-3 d-flex justify-content-center align-items-center" style="background-image: url({% static 'new/assets/images/about1_new.jpg' %});">
+					</div>
+					<div class="col-md-6 wrap-about px-md-5 ftco-animate py-5 bg-light">
+	          <div class="heading-section">
+	          	<span class="subheading">Welcome to Counselor</span>
+	            <h2 class="mb-4">Specialized Help For Your Mental Health</h2>
+
+	            <p>Have you observed that you have been feeling depressed or worried and that getting through each day is a struggle, there you need essential care and counselling. First, remember that seeking therapy is very common. When a person in need of help seeks care from Metro Mind, we aim at providing care of premium quality - care that begins with assessment by a team of specialists comprising psychiatrist, psychologist, social worker, etc</p>
+	            <p>Following evaluation, a personalised plan of management designed to suit individual person is crafted which is duly communicated to the person as well as to his caregivers. Before commencing treatment, all the possible options of management are conveyed and discussed with them.</p>
+
+<!--	            <a href="https://vimeo.com/45830194" class="play-video popup-vimeo d-flex align-items-center mt-4">-->
+<!--	            	<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-play"></span></div>-->
+<!--	            	<span class="watch">Watch Our Consultant Video</span>-->
+<!--	            </a>-->
+	          </div>
+
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="ftco-section">
+			<div class="container">
+				<div class="row justify-content-center mb-5">
+          <div class="col-md-8 text-center heading-section ftco-animate">
+          	<span class="subheading">Our Services</span>
+            <h2 class="mb-3">We Can Help You With This Situation</h2>
+          </div>
+        </div>
+				<div class="row tabulation mt-4 ftco-animate">
+  				<div class="col-md-4">
+						<ul class="nav nav-pills nav-fill d-md-flex d-block flex-column">
+						  <li class="nav-item text-left">
+						    <a class="nav-link active py-4" data-toggle="tab" href="#services-1">Relation Problem</a>
+						  </li>
+<!--						  <li class="nav-item text-left">-->
+<!--						    <a class="nav-link py-4" data-toggle="tab" href="#services-2">Couples Counseling</a>-->
+<!--						  </li>-->
+						  <li class="nav-item text-left">
+						    <a class="nav-link py-4" data-toggle="tab" href="#services-2">Depression Treatment</a>
+						  </li>
+						  <li class="nav-item text-left">
+						    <a class="nav-link py-4" data-toggle="tab" href="#services-3">Family Problem</a>
+						  </li>
+						  <li class="nav-item text-left">
+						    <a class="nav-link py-4" data-toggle="tab" href="#services-4">Personal Problem</a>
+						  </li>
+							<li class="nav-item text-left">
+						    <a class="nav-link py-4" data-toggle="tab" href="#services-5">Couples Counseling</a>
+						  </li>
+						  <li class="nav-item text-left">
+						    <a class="nav-link py-4" data-toggle="tab" href="#services-6">Business Problem</a>
+						  </li>
+						</ul>
+					</div>
+					<div class="col-md-8">
+						<div class="tab-content">
+						  <div class="tab-pane container p-0 active" id="services-1">
+						  	<div class="img" style="background-image: url({% static 'new/assets/images/relatn.jpg' %});"></div>
+						  	<h3><a href="#">Relation Problem</a></h3>
+						  	<p>Achieve a healthy and understanding relationship with your partner. We believe in creating a safe and confidential space where clients can explore their thoughts and emotions. Our counseling services are designed to support you in maintaining healthy relationships.</p>
+						  </div>
+<!--						  <div class="tab-pane container p-0 fade" id="services-2">-->
+<!--						  	<div class="img" style="background-image: url({% static 'new/assets/images/services-2.jpg' %});"></div>-->
+<!--						  	<h3><a href="#">Couples Counseling</a></h3>-->
+<!--						  	<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>-->
+<!--						  </div>-->
+						  <div class="tab-pane container p-0 fade" id="services-2">
+						  	<div class="img" style="background-image: url({% static 'new/assets/images/services2_new.jpg' %});"></div>
+						  	<h3><a href="#">Depression Treatment</a></h3>
+						  	<p>Depression is a word that is widely used but less understood. It is often confused with sadness, anxiety, phobia or stress.
+								Sadness, feeling down, having a loss of interest or pleasure in daily activities – these are symptoms familiar to all of us. But, if they persist and affect our life substantially, it may be depression. Depression is a mood disorder characterized by persistently low mood and a feeling of sadness and loss of interest. It is a persistent problem, not a passing one, lasting on average 6 to 8 months.</p>
+						  </div>
+						  <div class="tab-pane container p-0 fade" id="services-3">
+						  	<div class="img" style="background-image: url({% static 'new/assets/images/fam1.jpg' %});"></div>
+						  	<h3><a href="#">Family Problem</a></h3>
+						  	<p>If you are facing any family issues, whether it’s parenting challenges, marital problems, or any other type of conflict, our family therapy counselling offers a collaborative approach to help you resolve them. It helps to strengthen your relationship and bond with your family.</p>
+						  </div>
+						  <div class="tab-pane container p-0 fade" id="services-4">
+						  	<div class="img" style="background-image: url({% static 'new/assets/images/personal.jpg' %});"></div>
+						  	<h3><a href="#">Personal Problem</a></h3>
+							  <p>Some of the areas we work with in personal counselling are Depression,stress,Study related concerns, family and relationship issues,confidence and self-image issues,lack of motivation,social fear and anxiety,hurt,fear,shame,etc.These areas are some of the common Personal Counselling areas.Often people don’t reach out to a counsellor is because they fear being judged,This fear keeps people from their discovering their inner strength, self-discovery, change, growth and transformation. </p>
+						  </div>
+							<div class="tab-pane container p-0 fade" id="services-5">
+						  	<div class="img" style="background-image: url({% static 'new/assets/images/couple.jpg' %});"></div>
+						  	<h3><a href="#">Couples Counseling</a></h3>
+						  	<p>Sometimes we can love a person and still be toxic for them due to our past experiences, unresolved insecurities, distorted patterns of thinking, ideas of relationship, anger issues, controlling behavior etc.Couples can feel apprehensive about initiating therapy as it would mean acknowledging the difficulties that their relationship is experiencing. Some are not able to identify where things might be going wrong for them and end up increasing the problems  due to miscommunication, fights, emotional blackmail, cheating or violence etc.</p>
+						  </div>
+						  <div class="tab-pane container p-0 fade" id="services-6">
+						  	<div class="img" style="background-image: url({% static 'new/assets/images/business.jpg' %});"></div>
+						  	<h3><a href="#">Business Problem</a></h3>
+							  <p>Our team of counselling experts focus on identifying the precise reasons for the stress caused to the individual.Our experts create improvement programs based on the issue type for fast and better results.</p>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+    <section class="ftco-section testimony-section">
+    	<div class="img img-bg border" style="background-image: url({% static 'new/assets/images/bg_4.jpg' %});"></div>
+    	<div class="overlay"></div>
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-8 text-center heading-section heading-section-white ftco-animate">
+          	<span class="subheading">Testimonial</span>
+            <h2 class="mb-3">Happy Clients</h2>
+          </div>
+        </div>
+        <div class="row ftco-animate">
+          <div class="col-md-12">
+            <div class="carousel-testimony owl-carousel ftco-owl">
+              <div class="item">
+                <div class="testimony-wrap py-4">
+                	<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></div>
+                  <div class="text">
+                    <p class="mb-4">I have found this counsellling platform to be the best. All the things and steps are simple and easy. You can connect with your therapist and start your healing journey in the easiest way.</p>
+                    <div class="d-flex align-items-center">
+                    	<div class="user-img" style="background-image: url({% static 'new/assets/images/person1_new.jpg' %})"></div>
+                    	<div class="pl-3">
+		                    <p class="name">Mariya</p>
+		                    <span class="position">Engineer</span>
+		                  </div>
+	                  </div>
+                  </div>
+                </div>
+              </div>
+<!--              <div class="item">-->
+<!--                <div class="testimony-wrap py-4">-->
+<!--                	<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></div>-->
+<!--                  <div class="text">-->
+<!--                    <p class="mb-4">This platform came in my life when I was at the lowest point. Now, I believe I am alive because of the therapy I took. I am inspiring others and helping my friends with my positivity. It seems I have found my life's purpose.</p>-->
+<!--                    <div class="d-flex align-items-center">-->
+<!--                    	<div class="user-img" style="background-image: url({% static 'new/assets/images/person2_new.jpg' %})"></div>-->
+<!--                    	<div class="pl-3">-->
+<!--		                    <p class="name">william</p>-->
+<!--		                    <span class="position">Marketing Manager</span>-->
+<!--		                  </div>-->
+<!--	                  </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+              <div class="item">
+                <div class="testimony-wrap py-4">
+                	<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></div>
+                  <div class="text">
+                    <p class="mb-4">I am Glad to be taking therapy services from the best counselling platform. I am looking forward to take therapy for the lifetime. My therapist is my mentor in real sense. I have experienced a total life-transformation in my life.</p>
+                    <div class="d-flex align-items-center">
+                    	<div class="user-img" style="background-image: url({% static 'new/assets/images/shreya.jpg' %})"></div>
+                    	<div class="pl-3">
+		                    <p class="name">Shreya</p>
+		                    <span class="position">Single Mother</span>
+		                  </div>
+	                  </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap py-4">
+                	<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></div>
+                  <div class="text">
+                    <p class="mb-4">Understanding therapist! Very understanding therapist
+Took the time to listen and understand the situation -
+Flexible about timing, Offering extra or follow-ups when needed.</p>
+                    <div class="d-flex align-items-center">
+                    	<div class="user-img" style="background-image: url({% static 'new/assets/images/stud.jpg' %})"></div>
+                    	<div class="pl-3">
+		                    <p class="name">Robert</p>
+		                    <span class="position">Student</span>
+		                  </div>
+	                  </div>
+                  </div>
+                </div>
+              </div>
+				<div class="item">
+                <div class="testimony-wrap py-4">
+                	<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></div>
+                  <div class="text">
+                    <p class="mb-4">This platform came in my life when I was at the lowest point. Now, I believe I am alive because of the therapy I took. I am inspiring others and helping my friends with my positivity. It seems I have found my life's purpose.</p>
+                    <div class="d-flex align-items-center">
+                    	<div class="user-img" style="background-image: url({% static 'new/assets/images/person2_new.jpg' %})"></div>
+                    	<div class="pl-3">
+		                    <p class="name">william</p>
+		                    <span class="position">Marketing Manager</span>
+		                  </div>
+	                  </div>
+                  </div>
+                </div>
+              </div>
+<!--              <div class="item">-->
+<!--                <div class="testimony-wrap py-4">-->
+<!--                	<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></div>-->
+<!--                  <div class="text">-->
+<!--                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>-->
+<!--                    <div class="d-flex align-items-center">-->
+<!--                    	<div class="user-img" style="background-image: url({% static 'new/assets/images/person_2.jpg' %})"></div>-->
+<!--                    	<div class="pl-3">-->
+<!--		                    <p class="name">Roger Scott</p>-->
+<!--		                    <span class="position">Marketing Manager</span>-->
+<!--		                  </div>-->
+<!--	                  </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+    </section>
+
+
+		<section class="ftco-section bg-light">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5 mb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+          	<span class="subheading">Price &amp; Plans</span>
+            <h2>Affordable Packages</h2>
+          </div>
+        </div>
+    		<div class="row">
+    			<div class="col-md-4 ftco-animate d-flex">
+	          <div class="block-7 w-100">
+	            <div class="text-center">
+		            <span class="price"><sup>$</sup> <span class="number">49</span> <sub>/mo</sub></span>
+		            <span class="excerpt d-block">For Adults</span>
+		            <ul class="pricing-text mb-5">
+		              <li><span class="fa fa-check mr-2"></span>Individual Counseling</li>
+		              <li><span class="fa fa-check mr-2"></span>Couples Therapy</li>
+		              <li><span class="fa fa-check mr-2"></span>Family Therapy</li>
+		            </ul>
+
+		            <a href="#" class="btn btn-primary d-block px-2 py-3">Get Started</a>
+	            </div>
+	          </div>
+	        </div>
+	        <div class="col-md-4 ftco-animate d-flex">
+	          <div class="block-7 w-100">
+	            <div class="text-center">
+		            <span class="price"><sup>$</sup> <span class="number">79</span> <sub>/mo</sub></span>
+		            <span class="excerpt d-block">For Children</span>
+		            <ul class="pricing-text mb-5">
+		              <li><span class="fa fa-check mr-2"></span>Counseling for Children</li>
+		              <li><span class="fa fa-check mr-2"></span>Behavioral Management</li>
+		              <li><span class="fa fa-check mr-2"></span>Educational Counseling</li>
+		            </ul>
+
+		            <a href="#" class="btn btn-primary d-block px-2 py-3">Get Started</a>
+	            </div>
+	          </div>
+	        </div>
+	        <div class="col-md-4 ftco-animate d-flex">
+	          <div class="block-7 w-100">
+	            <div class="text-center">
+		            <span class="price"><sup>$</sup> <span class="number">109</span> <sub>/mo</sub></span>
+		            <span class="excerpt d-block">For Business</span>
+		            <ul class="pricing-text mb-5">
+		              <li><span class="fa fa-check mr-2"></span>Consultancy Services</li>
+		              <li><span class="fa fa-check mr-2"></span>Employee Counseling</li>
+		              <li><span class="fa fa-check mr-2"></span>Psychological Assessment</li>
+		            </ul>
+
+		            <a href="#" class="btn btn-primary d-block px-2 py-3">Get Started</a>
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+    	</div>
+    </section>
+
+		<section class="ftco-appointment ftco-section img" style="background-image: url({% static 'new/assets/images/bg_2.jpg' %});">
+			<div class="overlay"></div>
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-md-6 half ftco-animate">
+    				<h2 class="mb-4">Send a Message &amp; Get in touch!</h2>
+    				<form action="#" class="appointment">
+    					<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+			              <input type="text" class="form-control" placeholder="Your Name">
+			            </div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+			              <input type="text" class="form-control" placeholder="Email">
+			            </div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+			    					<div class="form-field">
+	          					<div class="select-wrap">
+	                      <div class="icon"><span class="fa fa-chevron-down"></span></div>
+	                      <select name="" id="" class="form-control">
+	                      	<option value="">Services</option>
+	                        <option value="">Relation Problem</option>
+	                        <option value="">Couple Counseling</option>
+	                        <option value="">Depression Treatment</option>
+	                        <option value="">Family Problem</option>
+	                        <option value="">Personal Problem</option>
+	                        <option value="">Business Problem</option>
+	                      </select>
+	                    </div>
+			              </div>
+			    				</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+			              <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+			            </div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+			              <input type="submit" value="Send message" class="btn btn-primary py-3 px-4">
+			            </div>
+								</div>
+    					</div>
+	          </form>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+          	<span class="subheading">Blog</span>
+            <h2>Recent Blog</h2>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <div class="text text-center">
+              	<a href="blog-single.html" class="block-20 img" style="background-image: url({% static 'new/assets/images/image_1.jpg' %});">
+	              </a>
+	              <div class="meta text-center mb-2 d-flex align-items-center justify-content-center">
+                	<div>
+                		<span class="day">18</span>
+                		<span class="mos">April</span>
+                		<span class="yr">2020</span>
+                	</div>
+                </div>
+                <h3 class="heading mb-3"><a href="#">Social Media Risks To Mental Health</a></h3>
+                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <div class="text text-center">
+              	<a href="blog-single.html" class="block-20 img" style="background-image: url({% static 'new/assets/images/image_2.jpg' %});">
+	              </a>
+	              <div class="meta text-center mb-2 d-flex align-items-center justify-content-center">
+                	<div>
+                		<span class="day">18</span>
+                		<span class="mos">April</span>
+                		<span class="yr">2020</span>
+                	</div>
+                </div>
+                <h3 class="heading mb-3"><a href="#">Social Media Risks To Mental Health</a></h3>
+                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <div class="text text-center">
+              	<a href="blog-single.html" class="block-20 img" style="background-image: url('{% static 'new/assets/images/image_3.jpg' %});">
+	              </a>
+	              <div class="meta text-center mb-2 d-flex align-items-center justify-content-center">
+                	<div>
+                		<span class="day">18</span>
+                		<span class="mos">April</span>
+                		<span class="yr">2020</span>
+                	</div>
+                </div>
+                <h3 class="heading mb-3"><a href="#">Social Media Risks To Mental Health</a mb-3></h3>
+								<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+							</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="ftco-footer">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-sm-12 col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2 logo"><a href="#">Counselor</a></h2>
+              <p>Far far away, behind the word mountains, far from the countries.</p>
+              <ul class="ftco-footer-social list-unstyled mt-2">
+                <li class="ftco-animate"><a href="#"><span class="fa fa-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="fa fa-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="fa fa-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2">Explore</h2>
+              <ul class="list-unstyled">
+                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>About</a></li>
+                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Contact</a></li>
+                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>What We Do</a></li>
+                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Plans &amp; Pricing</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2">Legal</h2>
+              <ul class="list-unstyled">
+                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Join us</a></li>
+                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Blog</a></li>
+                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Privacy &amp; Policy</a></li>
+                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Term &amp; Conditions</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Company</h2>
+              <ul class="list-unstyled">
+                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>About Us</a></li>
+                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Blog</a></li>
+                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Contact</a></li>
+                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Careers</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon fa fa-map marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
+	                <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+2 392 3929 210</span></a></li>
+	                <li><a href="#"><span class="icon fa fa-paper-plane pr-4"></span><span class="text">info@yourdomain.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid px-0 py-5 bg-black">
+      	<div class="container">
+      		<div class="row">
+	          <div class="col-md-12">
+
+	            <p class="mb-0" style="color: rgba(255,255,255,.5);"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib.com</a>
+	  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+	          </div>
+	        </div>
+      	</div>
+      </div>
+    </footer>
+
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="{% static 'new/assets/js/jquery.min.js' %}"></script>
+  <script src="{% static 'new/assets/js/jquery-migrate-3.0.1.min.js' %}"></script>
+  <script src="{% static 'new/assets/js/popper.min.js' %}"></script>
+  <script src="{% static 'new/assets/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'new/assets/js/jquery.easing.1.3.js' %}"></script>
+  <script src="{% static 'new/assets/js/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'new/assets/js/jquery.stellar.min.js' %}"></script>
+  <script src="{% static 'new/assets/js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'new/assets/js/jquery.magnific-popup.min.js' %}"></script>
+  <script src="{% static 'new/assets/js/jquery.animateNumber.min.js' %}"></script>
+  <script src="{% static 'new/assets/js/scrollax.min.js' %}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="{% static 'new/assets/js/google-map.js' %}"></script>
+  <script src="{% static 'new/assets/js/main.js' %}"></script>
+
+  </body>
+</html>

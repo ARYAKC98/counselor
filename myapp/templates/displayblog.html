@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'index.html' %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table style="width:100%" >
+    <tr>
+        <th>Title</th>
+        <th>Image</th>
+        <th>Description</th>
+    </tr>
+    {% for d in data %}
+
+    <tr>
+        <td>{{d.name}}</td>
+
+        <td>
+            <img src="{{d.image.url}}" width="100px" height="100px">
+
+        </td>
+        <td>{{d.description}}</td>
+<td>
+        <form action="{% url 'blog_edit' dataid=d.id %}">
+            <button type="submit" class="btn btn-primary mr-2">edit</button>
+        </form>
+</td>
+<td>
+
+            <form action="{% url 'delete_blog' dataid=d.id %}">
+                <button type="submit" class="btn btn-primary mr-2">delete</button>
+            </form>
+<td>
+    </tr>
+
+    {% endfor %}
+
+</body>
+</html>
+{% endblock %}
